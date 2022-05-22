@@ -60,8 +60,10 @@ jobs:
           popd
           # Move generated content to root directory of repo
           mv /tmp/$REPO_NAME/* .
-          # And .gitignore too:
+          # And hidden settings files:
           mv /tmp/$REPO_NAME/.gitignore .
+          mv /tmp/$REPO_NAME/.devcontainer .
+          mv /tmp/$REPO_NAME/.vscode .
           # Delete the setup.yml workflow, it has served its purpose
           rm .github/workflows/setup.yml
 
