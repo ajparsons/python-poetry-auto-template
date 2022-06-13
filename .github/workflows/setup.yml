@@ -56,7 +56,9 @@ jobs:
             lib_name=$REPO_NAME \
             description="$(echo $INFO | jq -r .repository.description)" \
             github_username="$(echo $INFO | jq -r .repository.owner.login)" \
-            author_name="$(echo $INFO | jq -r .repository.owner.name)"
+            author_name="$(echo $INFO | jq -r .repository.owner.name)" \
+            author_email="${{ github.event.pusher.email }}" \
+            github_id=$GITHUB_REPOSITORY
           popd
           # Move generated content to root directory of repo
           mv /tmp/$REPO_NAME/* .
