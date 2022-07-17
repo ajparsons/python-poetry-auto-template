@@ -1,4 +1,4 @@
-# GitHub Python poetry project template
+# GitHub python poetry project template
 
 ## How to use
 
