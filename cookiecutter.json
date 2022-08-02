@@ -7,5 +7,6 @@
   "author_name": "",
   "author_email": "",
   "year":"{% now 'utc', '%Y' %}",
-  "github_id": "user/repo"
+  "github_id": "user/repo",
+  "_copy_without_render": [".github"]
 }
