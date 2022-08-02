@@ -52,7 +52,7 @@ jobs:
           export REPO_NAME=$(echo $INFO | jq -r '.repository.name')
           # Run cookiecutter
           pushd /tmp
-          cookiecutter gh:ajparsons/cookie-python --no-input \
+          cookiecutter . --no-input \
             lib_name=$REPO_NAME \
             description="$(echo $INFO | jq -r .repository.description)" \
             github_username="$(echo $INFO | jq -r .repository.owner.login)" \
@@ -66,8 +66,10 @@ jobs:
           mv /tmp/$REPO_NAME/.gitignore .
           mv /tmp/$REPO_NAME/.devcontainer .
           mv /tmp/$REPO_NAME/.vscode .
-          # Delete the setup.yml workflow, it has served its purpose
-          rm .github/workflows/setup.yml
+          # Delete the setup.yml workflow and the cookiecuter files
+          rm .github/workflows/template_setup.yml
+          rm -r "{{cookiecutter.hyphenated}}"
+          rm -r cookiecutter.json
 
       - name: Force push new repo contents
         uses: stefanzweifel/git-auto-commit-action@v4
