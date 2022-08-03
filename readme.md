@@ -24,7 +24,7 @@ This repo can also be used to set up a template offline using [cookiecutter](htt
 python -m cookiecutter https://github.com/ajparsons/poetry-auto-template/
 ```
 
-## Features
+# Features
  
 The default package uses:
 
