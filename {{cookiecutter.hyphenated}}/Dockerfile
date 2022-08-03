@@ -9,4 +9,4 @@ RUN curl -sSL https://install.python-poetry.org | python - && \
     poetry self update --preview && \
     poetry self add poetry-bumpversion && \
     poetry install && \
-    echo "/workspaces/{{cookiecutter.underscored}}/src/" > /usr/local/lib/python3.10/site-packages/{{cookiecutter.underscored}}.pth
+    echo "/workspaces/{{cookiecutter.hyphenated}}/src/" > /usr/local/lib/python3.10/site-packages/{{cookiecutter.underscored}}.pth
