@@ -10,6 +10,7 @@ on:
 
 jobs:
   test:
+    if: ${{ github.repository != 'ajparsons/poetry-auto-template' }}
     strategy:
       fail-fast: false
       matrix:
