@@ -66,8 +66,9 @@ jobs:
           mv /tmp/$REPO_NAME/.gitignore .
           mv /tmp/$REPO_NAME/.devcontainer .
           mv /tmp/$REPO_NAME/.vscode .
-          # Delete the setup.yml workflow and the cookiecuter files
+          # Delete the template related workflow and the cookiecutter files
           rm .github/workflows/template_setup.yml
+          rm .github/workflows/template_test.yml
           rm -r "{{cookiecutter.hyphenated}}"
           rm -r cookiecutter.json
 
