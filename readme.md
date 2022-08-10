@@ -48,3 +48,12 @@ The default licence is the MIT Licence. Change if needed.
 * Set a GitHub Actions secret for PYPI_TOKEN. 
 * For the initial publish. In the Actions tab for a repo, trigger a manual workfork flow with the 'force to pypi' box ticked.
 * Subsequently, if the poetry version is bumped and all tests pass - the GitHub Action will automatically publish on push to the main branch.
+
+# Meta tests
+
+This project defines several meta tests in `tests/` that will:
+
+* Attempt to provision a template with basic variables.
+* Run the projects internal tests for self-integrity.
+
+This requires the packages listed in `requirements.dev.txt` to be installed.
