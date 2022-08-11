@@ -8,6 +8,5 @@
   "author_email": "",
   "year":"{% now 'utc', '%Y' %}",
   "yyyy_mm_dd":"{% now 'utc', '%Y-%m-%d' %}",
-  "github_id": "{{cookiecutter.github_username}}/{{cookiecutter.lib_name}}",
-  "_copy_without_render": [".github"]
+  "github_id": "{{cookiecutter.github_username}}/{{cookiecutter.lib_name}}"
 }
