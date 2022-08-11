@@ -61,6 +61,8 @@ jobs:
             github_id=$GITHUB_REPOSITORY
           popd
           # Move generated content to root directory of repo
+          rm -r tests
+          rm -r hooks
           mv /tmp/$REPO_NAME/* .
           # And hidden settings files:
           mv /tmp/$REPO_NAME/.gitignore .
@@ -71,6 +73,8 @@ jobs:
           rm .github/workflows/template_test.yml
           rm -r "{{cookiecutter.hyphenated}}"
           rm -r cookiecutter.json
+          rm pytest.ini
+          rm requirements.dev.txt
 
       - name: Force push new repo contents
         uses: stefanzweifel/git-auto-commit-action@v4
