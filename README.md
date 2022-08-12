@@ -49,7 +49,13 @@ The default licence is the MIT Licence. Change if needed.
 * For the initial publish. In the Actions tab for a repo, trigger a manual workfork flow with the 'force to pypi' box ticked.
 * Subsequently, if the poetry version is bumped and all tests pass - the GitHub Action will automatically publish on push to the main branch.
 
-# Meta tests
+# Development and forking
+
+If you want to modify or extend this approach - the self-bootstrapping behaviour will only happen when a repo does *not* end in '-auto-template'. If you clone this repo, into a different user or org space, it will not self-bootstrap because the name is the same.
+
+If you wanted to extend this into a basic django template - you might fork or clone the repo and call it 'django-auto-template'. This will not self-bootstrap, but new projects created from that template would. 
+
+## Meta tests
 
 This project defines several meta tests in `tests/` that will:
 

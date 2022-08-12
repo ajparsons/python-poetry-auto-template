@@ -7,7 +7,7 @@ on:
 
 jobs:
   setup-repo:
-    if: ${{ github.repository != 'ajparsons/poetry-auto-template' }}
+    if: ${{ !endsWith(github.repository, '-auto-template')  }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
