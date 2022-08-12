@@ -9,6 +9,7 @@
 		"ms-python.python",
 		"ms-python.vscode-pylance",
 		"ms-azuretools.vscode-docker",
-		"valentjn.vscode-ltex"
+		"valentjn.vscode-ltex",
+		"mhutchie.git-graph"
 	]
 }
