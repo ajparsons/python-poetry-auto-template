@@ -12,7 +12,7 @@ A new repository based on this template can be created in Github or through cook
 
 The templating process can be run entirely in GitHub to create a new repository. 
 
-Start here: https://github.com/ajparsons/poetry-auto-template/generate
+Start here: https://github.com/ajparsons/python-poetry-auto-template/generate
 
 Add a one-line description of your repository, then click "Create repository from template".
 
@@ -21,7 +21,7 @@ Add a one-line description of your repository, then click "Create repository fro
 This repo can also be used to set up a template offline using [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/). To start the processs:
 
 ```
-python -m cookiecutter https://github.com/ajparsons/poetry-auto-template/
+python -m cookiecutter https://github.com/ajparsons/python-poetry-auto-template/
 ```
 
 # Features
