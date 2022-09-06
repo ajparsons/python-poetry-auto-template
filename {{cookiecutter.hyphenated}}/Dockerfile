@@ -6,7 +6,6 @@ RUN curl -sSL https://install.python-poetry.org | python - && \
     echo "export PATH=\"/root/.local/bin:$PATH\"" > ~/.bashrc && \
     export PATH="/root/.local/bin:$PATH"  && \
     poetry config virtualenvs.create false && \
-    poetry self update --preview && \
     poetry self add poetry-bumpversion && \
     poetry install && \
     echo "/workspaces/{{cookiecutter.hyphenated}}/src/" > /usr/local/lib/python3.10/site-packages/{{cookiecutter.underscored}}.pth
