@@ -55,7 +55,7 @@ def activated_project(project_folder: Path):
     """
     Activate venv inside project
     """
-    subprocess.run("python -m poetry install".split(" "), check=True, cwd=project_folder)
+    subprocess.run("poetry install".split(" "), check=True, cwd=project_folder)
     return project_folder
 
 def test_project_generation(project_folder: Path):
@@ -70,18 +70,17 @@ def test_internal_pytest(activated_project: Path):
     Within clone of project, try and run the internal meta tests
     This will check basic stuff like the python library paths being valid.
     """
-    subprocess.run("python -m poetry run pytest".split(" "), check=True, cwd=activated_project)
-
+    subprocess.run("poetry run pytest".split(" "), check=True, cwd=activated_project)
 
 def test_black(activated_project: Path):
     """
     Within clone of project, try and run black
     """
-    subprocess.run("python -m poetry run black .".split(" "), check=True, cwd=activated_project)
+    subprocess.run("poetry run black .".split(" "), check=True, cwd=activated_project)
 
 
 def test_pyright(activated_project: Path):
     """
     Within clone of project, try and run pyright
     """
-    subprocess.run("python -m poetry run pyright".split(" "), check=True, cwd=activated_project)
+    subprocess.run("poetry run pyright".split(" "), check=True, cwd=activated_project)
