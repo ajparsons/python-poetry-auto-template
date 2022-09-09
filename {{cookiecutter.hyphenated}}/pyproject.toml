@@ -11,6 +11,7 @@ include = [
     "LICENSE.md",
 ]
 
+[tool.poetry_bumpversion.file."src/{{cookiecutter.underscored}}/__init__.py"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
