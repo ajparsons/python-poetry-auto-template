@@ -8,6 +8,7 @@
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
     },
+    "git.pullTags": false,
     "ltex.language": "en-GB",
     "files.exclude": {
         "**/.git": true,
