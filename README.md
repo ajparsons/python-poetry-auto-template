@@ -32,6 +32,7 @@ The default package uses:
 * [pytest](https://docs.pytest.org/en/7.1.x/) for testing,
 * [black](https://black.readthedocs.io/en/stable/) for linting,
 * [pyright](https://github.com/microsoft/pyright) for typechecking. 
+* [GitHub Actions](https://github.com/features/actions) for CI and publishing. 
 
 New repositories include config files and Dockerfile for developing in VS Code or Codespaces, so the development process can happen end to end in Github. (Or not! Will still worked cloned locally). 
 
