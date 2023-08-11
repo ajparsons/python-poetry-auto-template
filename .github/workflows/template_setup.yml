@@ -5,6 +5,10 @@ on:
   push:
   workflow_dispatch:
 
+permissions:
+  actions: write
+  contents: write
+
 jobs:
   setup-repo:
     if: ${{ !endsWith(github.repository, '-auto-template')  }}
